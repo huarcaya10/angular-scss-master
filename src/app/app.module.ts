@@ -20,6 +20,10 @@ import { DistributionComponent } from './components/admin/distribution/distribut
 import { ProductsComponent } from './components/admin/products/products.component';
 import { VentaComponent } from './components/admin/venta/venta.component';
 import { ProductionComponent } from './components/admin/production/production.component';
+import { ProductosCortosComponent } from './pages/productos-cortos/productos-cortos.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { GaleriaProductosComponent } from './componentes/galeria-productos/galeria-productos.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { ProductionComponent } from './components/admin/production/production.co
     DistributionComponent,
     ProductsComponent,
     VentaComponent,
-    ProductionComponent
+    ProductionComponent,
+    ProductosCortosComponent,
+    HomeComponent,
+    NotFoundComponent,
+    GaleriaProductosComponent
   ],
   imports: [
     ModalModule.forRoot(),

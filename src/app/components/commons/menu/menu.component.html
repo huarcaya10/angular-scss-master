@@ -1,39 +1,36 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Multiservicios Michel</a>
+      <a class="navbar-brand" routerLink="/">Multiservicios Michel</a>
       <button class="navbar-toggler" type="button" (click)="collapse.toggle()" data-bs-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <ngx-navbar-collapse #collapse="ngxNavbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" aria-current="page" routerLink="/home">Home</a>
             </li>
             <li class="nav-item dropdown" dropdown>
-                <a class="nav-link dropdown-toggle" dropdownToggle href="#" id="categori-drop-down" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="drop-down-categori">
-                  Categorias
-                </a>
-                <ul class="dropdown-menu" *dropdownMenu aria-labelledby="drop-down-categori">
-                  <li><a class="dropdown-item" href="#">Action1</a></li>
+                <a class="nav-link dropdown-toggle" dropdownToggle id="categori-drop-down" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cursos</a>
+                <ul class="dropdown-menu" *dropdownMenu >
+                  <li>
+                  <a class="dropdown-item" (click)="collapse.toggle()" routerLink="/Productos Cortos">Productos</a></li>
                   <li><a class="dropdown-item" href="#">Action2</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
+
+    
+              <li class="nav-item">
+                <a class="nav-link" (click)="collapse.toggle()"routerLink="/distribution" routerLinkActive="active">Distribución</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/distribution" routerLinkActive="active">Distribución</a>
+                <a class="nav-link" (click)="collapse.toggle()" routerLink="/production" routerLinkActive="active">Producción</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/production" routerLinkActive="active">Producción</a>
+                  <a class="nav-link" (click)="collapse.toggle()" routerLink="/products" routerLinkActive="active">Productos</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" routerLink="/products" routerLinkActive="active">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/venta" routerLinkActive="active">Ventas</a>
+                <a class="nav-link" (click)="collapse.toggle()" routerLink="/venta" routerLinkActive="active">Ventas</a>
               </li>
             </ul>
       </ngx-navbar-collapse>
